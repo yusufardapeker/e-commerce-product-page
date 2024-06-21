@@ -1,9 +1,8 @@
+import "./styles/reset.css";
+import "./styles/global.css";
+
 function App() {
-	return (
-		<>
-			<h1>Tamam</h1>
-		</>
-	);
+	return <></>;
 }
 
 export default App;
