@@ -1,0 +1,24 @@
+.showcaseWrapper {
+	display: flex;
+	position: relative;
+}
+
+.prevIcon {
+	position: absolute;
+	left: 16px;
+	top: 40%;
+	transform: translateY(-40%);
+	background-color: var(--white);
+	padding: 12px 14px;
+	border-radius: 50%;
+}
+
+.nextIcon {
+	position: absolute;
+	right: 16px;
+	top: 40%;
+	transform: translateY(-40%);
+	background-color: var(--white);
+	padding: 12px 14px;
+	border-radius: 50%;
+}

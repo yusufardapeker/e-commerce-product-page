@@ -1,0 +1,65 @@
+.purchaseWrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 32px;
+	gap: 12px;
+	font-weight: var(--font-weight-bold);
+}
+
+.purchaseAmount {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--light-grayish-blue);
+	padding: 16px 24px;
+	border-radius: 8px;
+}
+
+.amountNumber {
+	color: var(--very-dark-blue);
+}
+
+.addButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	background-color: var(--orange);
+	padding: 16px 24px;
+	border-radius: 8px;
+	color: var(--very-dark-blue);
+	font-weight: var(--font-weight-extra-bold);
+}
+
+.priceWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.finalCostWrapper {
+	display: flex;
+	gap: 24px;
+}
+
+.finalCost {
+	font-size: 32px;
+}
+
+.discountRate {
+	font-size: 14px;
+	background-color: var(--very-dark-blue);
+	color: var(--white);
+	padding: 6px 12px;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	align-self: self-end;
+}
+
+.realPrice {
+	text-decoration: line-through;
+	color: var(--grayish-blue);
+	font-size: 18px;
+}

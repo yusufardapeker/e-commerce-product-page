@@ -22,7 +22,7 @@ function Header() {
 				</div>
 
 				<div className={styles.userCartWrapper}>
-					<CardIcon />
+					<CardIcon color="#69707D" />
 					<User />
 				</div>
 			</header>
