@@ -1,0 +1,77 @@
+.cartContainer {
+	width: 350px;
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	background-color: var(--white);
+	padding: 20px;
+	border-radius: 4px;
+	overflow: hidden;
+	color: var(--dark-grayish-blue);
+	font-weight: var(--font-weight-bold);
+}
+
+.cardBody {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+h4 {
+	margin-bottom: 32px;
+	position: relative;
+}
+
+h4:after {
+	position: absolute;
+	content: "";
+	top: 50px;
+	left: -20px;
+	right: 0;
+	width: 114%;
+	height: 1px;
+	background-color: var(--grayish-blue);
+}
+
+h5 {
+	text-align: center;
+	margin-top: 24px;
+}
+
+.productWrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-top: 16px;
+}
+
+.productImg {
+	width: 60px;
+	height: 60px;
+	border-radius: 4px;
+}
+
+.prdouctPrice {
+	display: flex;
+	gap: 6px;
+}
+
+.productInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.realCost {
+	color: var(--very-dark-blue);
+}
+
+.displayBlock {
+	display: block;
+}
+
+.displayNone {
+	display: none;
+}
