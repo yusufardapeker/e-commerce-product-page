@@ -1,6 +1,7 @@
 .showcaseWrapper {
 	display: flex;
 	position: relative;
+	transition: all 800ms ease;
 }
 
 .prevIcon {
