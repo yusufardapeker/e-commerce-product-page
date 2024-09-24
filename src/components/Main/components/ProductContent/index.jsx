@@ -7,7 +7,7 @@ import AddToCart from "./AddToCart";
 
 function index() {
 	return (
-		<div>
+		<div className="container product-info">
 			<InformationText />
 			<AddToCart />
 		</div>

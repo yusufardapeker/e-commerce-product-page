@@ -14,7 +14,8 @@ import userProfileImg from "../../images/image-avatar.png";
 import { ProductContext } from "../../context/ProductContext";
 
 function index() {
-	const { showMobileNav, unHideMobileNav, showCart, toggleCart } = useContext(ProductContext);
+	const { showMobileNav, unHideMobileNav, showCart, toggleCart, count } =
+		useContext(ProductContext);
 
 	return (
 		<header>
@@ -27,6 +28,7 @@ function index() {
 			</div>
 			<div className="user-info-wrapper">
 				<img src={cartIcon} className="cart-icon" onClick={toggleCart} />
+
 				<img src={userProfileImg} className="user-profile-img" />
 
 				{showCart && <Cart />}

@@ -17,11 +17,13 @@ header {
 
 		.mobile-nav {
 			position: absolute;
+			z-index: 2;
 			top: 0px;
-			left: 20px;
+			left: 0;
 			bottom: 0;
 			background-color: $white;
 			width: 70%;
+			padding-left: 20px;
 
 			.close-icon {
 				margin-top: 30px;
@@ -38,6 +40,7 @@ header {
 
 		.mobile-overlay {
 			position: absolute;
+			z-index: 2;
 			top: 0;
 			right: 0;
 			bottom: 0;
@@ -56,6 +59,7 @@ header {
 
 		.cart {
 			position: absolute;
+			z-index: 2;
 			left: 50%;
 			top: 16%;
 			transform: translateX(-50%);

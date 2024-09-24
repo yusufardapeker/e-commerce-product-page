@@ -8,7 +8,7 @@ import LigthboxGallery from "./LigthboxGallery";
 
 function index() {
 	return (
-		<div>
+		<div className="image-galleries-wrapper">
 			<MobileGallery />
 			<DesktopGallery />
 			<LigthboxGallery />

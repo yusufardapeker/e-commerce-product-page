@@ -1,7 +1,7 @@
 import React from "react";
 
 function LigthboxGallery() {
-	return <div>LigthboxGallery</div>;
+	return <div className="lightbox-gallery">LigthboxGallery</div>;
 }
 
 export default LigthboxGallery;

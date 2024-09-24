@@ -1,1 +1,71 @@
-@import "../../../../styles/global.scss";
+@import "../../../../styles/global";
+
+.product-wrapper {
+	.image-galleries-wrapper {
+		.desktop-gallery {
+			display: none;
+		}
+
+		.lightbox-gallery {
+			display: none;
+		}
+
+		.mobile-gallery {
+			overflow: hidden;
+
+			.img-container {
+				display: flex;
+				transition: transform 500ms ease;
+			}
+
+			@mixin arrowElement {
+				position: absolute;
+				background-color: $light-grayish-blue;
+				padding: 8px 10px;
+				border-radius: 50%;
+				top: 40%;
+				width: 32px;
+				height: auto;
+			}
+
+			.arrow-prev {
+				@include arrowElement;
+				left: 20px;
+			}
+			.arrow-next {
+				@include arrowElement;
+				right: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 376px) {
+	.product-wrapper {
+		.image-galleries-wrapper {
+			width: 45%;
+			.mobile-gallery {
+				display: none;
+			}
+
+			.desktop-gallery {
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
+
+				img {
+					border-radius: 12px;
+				}
+
+				.thumbnail-wrapper {
+					display: flex;
+					gap: 16px;
+
+					img {
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+}

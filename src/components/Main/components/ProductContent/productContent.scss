@@ -1,1 +1,123 @@
 @import "../../../../styles/global.scss";
+
+.product-wrapper {
+	.product-info {
+		margin-top: 20px;
+		margin-bottom: 40px;
+
+		.information-text {
+			margin-bottom: 40px;
+
+			.subtitle {
+				color: $dark-grayish-blue;
+				text-transform: uppercase;
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+
+			.title {
+				margin-top: 12px;
+				margin-bottom: 20px;
+				color: $very-dark-blue;
+			}
+
+			.description {
+				line-height: 1.6;
+				color: $dark-grayish-blue;
+			}
+		}
+
+		.add-to-cart {
+			font-weight: $fw-bold;
+
+			.price {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 24px;
+
+				.discount {
+					.discounted-price {
+						margin-right: 20px;
+						font-size: 26px;
+					}
+
+					.discount-rate {
+						color: $white;
+						background-color: $very-dark-blue;
+						padding: 4px 10px;
+						font-size: 14px;
+						border-radius: 4px;
+					}
+				}
+
+				.base-price {
+					color: $dark-grayish-blue;
+					text-decoration: line-through;
+					font-size: 14px;
+				}
+			}
+
+			.count {
+				.count-number-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					background-color: $light-grayish-blue;
+					padding: 16px;
+					border-radius: 4px;
+					margin-bottom: 16px;
+				}
+
+				.add-to-cart-btn {
+					display: flex;
+					justify-content: center;
+					gap: 16px;
+					background-color: $orange;
+					padding: 16px;
+					border-radius: 4px;
+
+					svg.cart-icon path {
+						fill: $very-dark-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 376px) {
+	.product-wrapper {
+		.container {
+			margin: unset;
+		}
+
+		.product-info {
+			width: 42%;
+
+			.add-to-cart {
+				.price {
+					flex-direction: column;
+					align-items: flex-start;
+
+					.discount {
+						margin-bottom: 12px;
+					}
+				}
+
+				.count {
+					display: flex;
+					gap: 20px;
+
+					& > * {
+						flex: 1;
+					}
+
+					.add-to-cart-btn {
+						align-items: center;
+					}
+				}
+			}
+		}
+	}
+}

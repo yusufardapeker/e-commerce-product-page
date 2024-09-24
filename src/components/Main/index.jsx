@@ -8,8 +8,10 @@ import ProductContent from "./components/ProductContent";
 function index() {
 	return (
 		<main>
-			<ProductGallery />
-			<ProductContent />
+			<div className="product-wrapper">
+				<ProductGallery />
+				<ProductContent />
+			</div>
 		</main>
 	);
 }
