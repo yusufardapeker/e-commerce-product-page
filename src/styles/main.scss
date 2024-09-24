@@ -11,10 +11,18 @@ $black-750: hsla(0, 0%, 0%, 0.75); //(with 75% opacity for lightbox background)
 
 // Font Weights
 $fw-regular: 400;
+$fw-medium: 500;
 $fw-bold: 700;
 
 body {
 	font-family: "Kumbh Sans", sans-serif;
 	font-size: 16px;
 	font-weight: $fw-regular;
+}
+
+.container {
+	max-width: 1100px;
+	width: 88%;
+	margin-left: auto;
+	margin-right: auto;
 }
