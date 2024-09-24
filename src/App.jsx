@@ -1,12 +1,14 @@
 import "./styles/reset.css";
-import "./styles/main.scss";
+import "./styles/global.scss";
 
 import Header from "./components/Header";
+import Main from "./components/Main";
 
 function App() {
 	return (
 		<div className="container">
 			<Header />
+			<Main />
 		</div>
 	);
 }
