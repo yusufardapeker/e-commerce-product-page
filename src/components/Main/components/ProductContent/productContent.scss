@@ -24,6 +24,7 @@
 			.description {
 				line-height: 1.6;
 				color: $dark-grayish-blue;
+				font-weight: $fw-medium;
 			}
 		}
 
@@ -97,13 +98,39 @@
 		.product-info {
 			width: 42%;
 
+			.information-text {
+				.subtitle {
+					font-size: 16px;
+				}
+
+				.title {
+					font-size: 40px;
+				}
+
+				.description {
+					font-size: 18px;
+				}
+			}
+
 			.add-to-cart {
 				.price {
 					flex-direction: column;
 					align-items: flex-start;
 
 					.discount {
-						margin-bottom: 12px;
+						margin-bottom: 16px;
+
+						.discounted-price {
+							font-size: 28px;
+						}
+
+						.discount-rate {
+							font-size: 16px;
+						}
+					}
+
+					.base-price {
+						font-size: 18px;
 					}
 				}
 

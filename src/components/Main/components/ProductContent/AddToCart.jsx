@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import minusIcon from "../../../../images/icon-minus.svg";
 import plusIcon from "../../../../images/icon-plus.svg";
-import { ProductContext } from "../../../../context/productContext";
+import { ProductContext } from "../../../../context/ProductContext";
 
 function AddToCart() {
 	const { count, increment, decrement, setIsCartEmpty } = useContext(ProductContext);
