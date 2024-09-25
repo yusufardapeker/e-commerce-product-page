@@ -14,13 +14,17 @@ import userProfileImg from "../../images/image-avatar.png";
 import { ProductContext } from "../../context/ProductContext";
 
 function index() {
-	const { showMobileNav, unHideMobileNav, showCart, toggleCart, count } =
+	const { showMobileNav, setShowMobileNav, showCart, toggleCart, count, isCartEmpty } =
 		useContext(ProductContext);
 
 	return (
 		<header>
 			<div className="site-links-wrapper">
-				<img src={hamburgerMenuIcon} className="hamburger-menu-icon" onClick={unHideMobileNav} />
+				<img
+					src={hamburgerMenuIcon}
+					className="hamburger-menu-icon"
+					onClick={() => setShowMobileNav(true)}
+				/>
 				<img src={logo} className="logo" />
 				<DesktopNav />
 
@@ -28,6 +32,8 @@ function index() {
 			</div>
 			<div className="user-info-wrapper">
 				<img src={cartIcon} className="cart-icon" onClick={toggleCart} />
+
+				{!isCartEmpty && <span className="cart-count">{count}</span>}
 
 				<img src={userProfileImg} className="user-profile-img" />
 

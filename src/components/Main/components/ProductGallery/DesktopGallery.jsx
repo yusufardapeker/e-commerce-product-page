@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import productImage1 from "../../../../images/image-product-1.jpg";
 import productThumbnail1 from "../../../../images/image-product-1-thumbnail.jpg";
@@ -11,14 +11,16 @@ import productThumbnail3 from "../../../../images/image-product-3-thumbnail.jpg"
 
 import productImage4 from "../../../../images/image-product-4.jpg";
 import productThumbnail4 from "../../../../images/image-product-4-thumbnail.jpg";
+import { ProductContext } from "../../../../context/productContext";
 
 function DesktopGallery() {
+	const { setShowLightbox } = useContext(ProductContext);
 	const [currentImg, setCurrentImg] = useState(productImage1);
 
 	return (
 		<div className="desktop-gallery">
 			<div className="currentImg">
-				<img src={currentImg} />
+				<img src={currentImg} onClick={() => setShowLightbox(true)} />
 			</div>
 			<div
 				className="thumbnail-wrapper"

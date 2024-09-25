@@ -9,7 +9,7 @@ import LigthboxGallery from "./LigthboxGallery";
 function index() {
 	return (
 		<div className="image-galleries-wrapper">
-			<MobileGallery />
+			<MobileGallery translateNumber={"375px"} translateUnit={"px"} />
 			<DesktopGallery />
 			<LigthboxGallery />
 		</div>

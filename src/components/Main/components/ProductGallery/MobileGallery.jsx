@@ -8,7 +8,7 @@ import productImage4 from "../../../../images/image-product-4.jpg";
 import arrowNext from "../../../../images/icon-next.svg";
 import arrowPrev from "../../../../images/icon-previous.svg";
 
-function MobileGallery() {
+function MobileGallery({ translateNumber, translateUnit }) {
 	const imagesArray = [productImage1, productImage2, productImage3, productImage4];
 
 	const galleryRef = useRef();
@@ -22,7 +22,9 @@ function MobileGallery() {
 			idx = imagesArray.length - 1;
 		}
 
-		galleryRef.current.style.transform = `translateX(${-idx * 375}px)`;
+		galleryRef.current.style.transform = `translateX(${
+			-idx * parseInt(translateNumber)
+		}${translateUnit})`;
 	};
 
 	const handlePrevImage = () => {

@@ -6,9 +6,8 @@ function ProductProvider({ children }) {
 	const [showMobileNav, setShowMobileNav] = useState(false);
 	const [showCart, setShowCart] = useState(false);
 	const [count, setCount] = useState(0);
-
-	const hideMobileNav = () => setShowMobileNav(false);
-	const unHideMobileNav = () => setShowMobileNav(true);
+	const [isCartEmpty, setIsCartEmpty] = useState(true);
+	const [showLightbox, setShowLightbox] = useState(false);
 
 	const toggleCart = () => setShowCart(!showCart);
 
@@ -19,13 +18,17 @@ function ProductProvider({ children }) {
 		<ProductContext.Provider
 			value={{
 				showMobileNav,
-				hideMobileNav,
-				unHideMobileNav,
+				setShowMobileNav,
 				showCart,
+				setShowCart,
 				toggleCart,
 				count,
 				increment,
 				decrement,
+				isCartEmpty,
+				setIsCartEmpty,
+				showLightbox,
+				setShowLightbox,
 			}}
 		>
 			{children}

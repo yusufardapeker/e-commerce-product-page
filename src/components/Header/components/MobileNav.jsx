@@ -4,12 +4,12 @@ import closeIcon from "../../../images/icon-close.svg";
 import { ProductContext } from "../../../context/ProductContext";
 
 function MobileNav({}) {
-	const { hideMobileNav } = useContext(ProductContext);
+	const { setShowMobileNav } = useContext(ProductContext);
 
 	return (
 		<>
 			<div className="mobile-nav">
-				<img src={closeIcon} className="close-icon" onClick={hideMobileNav} />
+				<img src={closeIcon} className="close-icon" onClick={() => setShowMobileNav(false)} />
 
 				<nav className="mobile-menu-links">
 					<a href="#" className="mobile-menu-link">
