@@ -19,9 +19,9 @@ function AddToCart() {
 
 			<div className="count">
 				<div className="count-number-wrapper">
-					<img src={minusIcon} onClick={decrement} />
+					<img src={minusIcon} className="minus-icon" onClick={decrement} />
 					<span className="count-number">{count}</span>
-					<img src={plusIcon} onClick={increment} />
+					<img src={plusIcon} className="plus-icon" onClick={increment} />
 				</div>
 
 				<div className="add-to-cart-btn" onClick={() => setIsCartEmpty(false)}>

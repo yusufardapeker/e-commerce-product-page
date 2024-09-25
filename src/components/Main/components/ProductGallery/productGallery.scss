@@ -98,8 +98,29 @@
 					display: flex;
 					gap: 16px;
 
-					img {
+					.thumbnail-img {
 						width: 100px;
+						cursor: pointer;
+					}
+
+					.thumbnail-img.active {
+						border: 3px solid $orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1441px) {
+	.product-wrapper {
+		.image-galleries-wrapper {
+			width: 40%;
+
+			.desktop-gallery {
+				.thumbnail-wrapper {
+					img {
+						width: 88px;
 					}
 				}
 			}

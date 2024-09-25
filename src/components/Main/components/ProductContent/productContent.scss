@@ -67,12 +67,17 @@
 					padding: 16px;
 					border-radius: 4px;
 					margin-bottom: 16px;
+
+					[class*="icon"] {
+						cursor: pointer;
+					}
 				}
 
 				.add-to-cart-btn {
 					display: flex;
 					justify-content: center;
 					gap: 16px;
+					cursor: pointer;
 
 					svg.cart-icon path {
 						fill: $very-dark-blue;
