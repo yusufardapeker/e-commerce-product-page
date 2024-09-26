@@ -14,6 +14,8 @@ function ProductProvider({ children }) {
 	const increment = () => setCount((prev) => prev + 1);
 	const decrement = () => setCount((prev) => (prev > 0 ? prev - 1 : prev));
 
+	const fillCart = () => count > 0 && setIsCartEmpty(false);
+
 	return (
 		<ProductContext.Provider
 			value={{
@@ -27,6 +29,7 @@ function ProductProvider({ children }) {
 				decrement,
 				isCartEmpty,
 				setIsCartEmpty,
+				fillCart,
 				showLightbox,
 				setShowLightbox,
 			}}
