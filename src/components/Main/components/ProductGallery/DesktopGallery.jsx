@@ -48,7 +48,7 @@ function DesktopGallery() {
 						className="thumbnail-img"
 						src={thumbnail}
 						key={index}
-						full-image={`/src/images/image-product-${index + 1}.jpg`}
+						full-image={`src/images/image-product-${index + 1}.jpg`}
 					/>
 				))}
 			</div>
