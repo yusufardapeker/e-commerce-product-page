@@ -91,6 +91,10 @@
 				flex-direction: column;
 				gap: 32px;
 
+				.currentImg {
+					cursor: pointer;
+				}
+
 				img {
 					border-radius: 12px;
 				}
