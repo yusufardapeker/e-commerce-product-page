@@ -26,7 +26,7 @@ function DesktopGallery() {
 	];
 
 	const handleThumbnailChange = (e) => {
-		setCurrentImg(e.target.attributes[2].value);
+		setCurrentImg(e.target.attributes[1].value);
 
 		const thumbnailImages = document.querySelectorAll(".thumbnail-img");
 
@@ -43,14 +43,10 @@ function DesktopGallery() {
 				<img src={currentImg} onClick={() => setShowLightbox(true)} />
 			</div>
 			<div className="thumbnail-wrapper" onClick={(e) => handleThumbnailChange(e)}>
-				{productThumbnailArray.map((thumbnail, index) => (
-					<img
-						className="thumbnail-img"
-						src={thumbnail}
-						key={index}
-						full-image={`src/images/image-product-${index + 1}.jpg`}
-					/>
-				))}
+				<img src={productThumbnail1} full-image={productImage1} className="thumbnail-img" />
+				<img src={productThumbnail2} full-image={productImage2} className="thumbnail-img" />
+				<img src={productThumbnail3} full-image={productImage3} className="thumbnail-img" />
+				<img src={productThumbnail4} full-image={productImage4} className="thumbnail-img" />
 			</div>
 		</div>
 	);
