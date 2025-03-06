@@ -1,36 +1,48 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 
-import productImage1 from "../../../../images/image-product-1.jpg";
-import productThumbnail1 from "../../../../images/image-product-1-thumbnail.jpg";
+import fullImage1 from "../../../../images/image-product-1.jpg";
+import thumbnail1 from "../../../../images/image-product-1-thumbnail.jpg";
 
-import productImage2 from "../../../../images/image-product-2.jpg";
-import productThumbnail2 from "../../../../images/image-product-2-thumbnail.jpg";
+import fullImage2 from "../../../../images/image-product-2.jpg";
+import thumbnail2 from "../../../../images/image-product-2-thumbnail.jpg";
 
-import productImage3 from "../../../../images/image-product-3.jpg";
-import productThumbnail3 from "../../../../images/image-product-3-thumbnail.jpg";
+import fullImage3 from "../../../../images/image-product-3.jpg";
+import thumbnail3 from "../../../../images/image-product-3-thumbnail.jpg";
 
-import productImage4 from "../../../../images/image-product-4.jpg";
-import productThumbnail4 from "../../../../images/image-product-4-thumbnail.jpg";
+import fullImage4 from "../../../../images/image-product-4.jpg";
+import thumbnail4 from "../../../../images/image-product-4-thumbnail.jpg";
 
 import { ProductContext } from "../../../../context/ProductContext";
 
 function DesktopGallery() {
 	const { setShowLightbox } = useContext(ProductContext);
-	const [currentImg, setCurrentImg] = useState(productImage1);
+	const [currentFullImg, setCurrentFullImg] = useState(fullImage1);
 
-	const productThumbnailArray = [
-		productThumbnail1,
-		productThumbnail2,
-		productThumbnail3,
-		productThumbnail4,
+	const thumbnailElements = useRef([]);
+
+	const productImages = [
+		{
+			fullImg: fullImage1,
+			thumbnail: thumbnail1,
+		},
+		{
+			fullImg: fullImage2,
+			thumbnail: thumbnail2,
+		},
+		{
+			fullImg: fullImage3,
+			thumbnail: thumbnail3,
+		},
+		{
+			fullImg: fullImage4,
+			thumbnail: thumbnail4,
+		},
 	];
 
 	const handleThumbnailChange = (e) => {
-		setCurrentImg(e.target.attributes[1].value);
+		setCurrentFullImg(e.target.dataset.fullimg);
 
-		const thumbnailImages = document.querySelectorAll(".thumbnail-img");
-
-		thumbnailImages.forEach((image) => {
+		thumbnailElements.current.forEach((image) => {
 			image.classList.remove("active");
 		});
 
@@ -40,13 +52,18 @@ function DesktopGallery() {
 	return (
 		<div className="desktop-gallery">
 			<div className="currentImg">
-				<img src={currentImg} onClick={() => setShowLightbox(true)} />
+				<img src={currentFullImg} onClick={() => setShowLightbox(true)} />
 			</div>
 			<div className="thumbnail-wrapper" onClick={(e) => handleThumbnailChange(e)}>
-				<img src={productThumbnail1} full-image={productImage1} className="thumbnail-img" />
-				<img src={productThumbnail2} full-image={productImage2} className="thumbnail-img" />
-				<img src={productThumbnail3} full-image={productImage3} className="thumbnail-img" />
-				<img src={productThumbnail4} full-image={productImage4} className="thumbnail-img" />
+				{productImages.map((product, index) => (
+					<img
+						src={product.thumbnail}
+						className="thumbnail-img"
+						key={index}
+						ref={(el) => (thumbnailElements.current[index] = el)}
+						data-fullimg={product.fullImg}
+					/>
+				))}
 			</div>
 		</div>
 	);
